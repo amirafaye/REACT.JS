@@ -1,0 +1,26 @@
+ALGORITHM checkpoint_1 
+var 
+set1 , set2 : array_name : ARRAY_OF INTEGER[10];
+sum : INTEGER := 0 ;
+i , j :INTEGER
+BEGIN 
+FOR i FROM 0 TO set1.length-1 DO
+FOR j FROM 0 TO set2.length-1 DO
+IF (set1[i] == set2[j])THEN
+return TRUE
+ELSE 
+sum := sum + set1[i]
+END_IF 
+END_FOR
+END_FOR
+FOR j FROM 0 TO set2.length-1 DO
+FOR i FROM 0 TO set1.length-1 DO
+IF (set1[j] == set2[i])THEN
+return TRUE
+ELSE
+sum := sum + set2[j]
+END_IF
+END_FOR
+END_FOR
+write(sum)
+END 
